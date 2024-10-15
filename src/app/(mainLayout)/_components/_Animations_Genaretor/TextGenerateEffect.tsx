@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 "use client";
 import { motion, stagger, useAnimate } from "framer-motion";
 import { useEffect } from "react";
@@ -9,11 +10,13 @@ export const TextGenerateEffect = ({
   className,
   filter = true,
   duration = 0.5,
+  textSize = "text-2xl",
 }: {
   words: string;
   className?: string;
   filter?: boolean;
   duration?: number;
+  textSize?: string;
 }) => {
   const [scope, animate] = useAnimate();
   let wordsArray = words.split(" ");
@@ -55,7 +58,9 @@ export const TextGenerateEffect = ({
   return (
     <div className={cn("font-bold", className)}>
       <div className="mt-4">
-        <div className=" dark:text-white text-black text-2xl leading-snug tracking-wide">
+        <div
+          className={`dark:text-white text-black  leading-snug tracking-wide ${textSize}`}
+        >
           {renderWords()}
         </div>
       </div>

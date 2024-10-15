@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useId, useRef, useState } from "react";

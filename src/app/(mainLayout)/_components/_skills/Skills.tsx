@@ -1,0 +1,74 @@
+/* eslint-disable prettier/prettier */
+import { IconCloud } from "../_Animations_Genaretor/CloudPropsSkills";
+import { TextGenerateEffect } from "../_Animations_Genaretor/TextGenerateEffect";
+import Container from "../_Container/Container";
+
+const Skills = () => {
+  const slugs = [
+    "typescript",
+    "javascript",
+    "dart",
+    "java",
+    "react",
+    "flutter",
+    "android",
+    "html5",
+    "css3",
+    "nodedotjs",
+    "express",
+    "nextdotjs",
+    "prisma",
+    "amazonaws",
+    "postgresql",
+    "firebase",
+    "nginx",
+    "vercel",
+    "testinglibrary",
+    "jest",
+    "cypress",
+    "docker",
+    "git",
+    "jira",
+    "github",
+    "gitlab",
+    "visualstudiocode",
+    "androidstudio",
+    "sonarqube",
+    "figma",
+  ];
+  const expertise =
+    "Expertise: HTML, CSS, Bootstrap, Tailwind, daisyui, flowbite, material-tailwind, shadcn, Ant Design, NextUi, nexios-http, JavaScript, TypeScript, DOM, OOP, React JS, Redux, nextJS, Express JS, MongoDB, Mongoose, Jod, Joi";
+
+  const comfortable =
+    "Comfortable: React-hook-form, swiperJs, GSAP, Lottie, Firebase, Stripe JS, AmarPay, finsweet";
+
+  const familiar = "Familiar: Spline, Node JS, Farmer Motion";
+
+  const tools =
+    "Tools: Axios, tanstack query, React Router, JWT, Chrome dev tools, GitHub, netlify, vercel, VS code";
+
+  const interpersonalSkills =
+    "Interpersonal: Expert on WordPress and webflow customization, comfortable with canva, MS Excel, Photoshop";
+
+  return (
+    <Container>
+      <div className="flex items-center gap-5 justify-center mt-10 ">
+        <div className="w-[50%] ">
+          <h2 className="text-4xl md:text-7xl font-bold text-left bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+            Technical Proficiencies
+          </h2>
+          <TextGenerateEffect words={expertise} />
+          <TextGenerateEffect words={comfortable} />
+          <TextGenerateEffect words={familiar} />
+          <TextGenerateEffect words={tools} />
+          <TextGenerateEffect words={interpersonalSkills} />
+        </div>
+        <div className="w-[50%] relative flex size-full items-center justify-center overflow-hidden   bg-background px-20 pb-20  border-r-4 border-sky-600">
+          <IconCloud iconSlugs={slugs} />
+        </div>
+      </div>
+    </Container>
+  );
+};
+
+export default Skills;
