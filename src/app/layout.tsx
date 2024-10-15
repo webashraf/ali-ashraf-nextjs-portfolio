@@ -3,6 +3,7 @@ import "@/src/styles/globals.css";
 import clsx from "clsx";
 import { Metadata, Viewport } from "next";
 
+import { FloatingNavDemo } from "./(mainLayout)/_components/_Menu/NavMenu";
 import { Providers } from "./providers";
 
 import { fontSans } from "@/src/config/fonts";
@@ -43,6 +44,7 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen">
             {/* <Navbar /> */}
+            <FloatingNavDemo />
             <main className="container max-w-[1900px] mx-auto   px-6 flex-grow">
               {children}
             </main>
