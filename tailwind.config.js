@@ -15,7 +15,7 @@ module.exports = {
       animation: {
         spotlight: 'spotlight 2s ease .75s 1 forwards',
         meteor: 'meteor 5s linear infinite',
-        'shiny-text': 'shiny-text 8s infinite'
+        "shiny-text": "shiny-text 8s infinite",
       },
       keyframes: {
         spotlight: {
@@ -41,14 +41,14 @@ module.exports = {
             opacity: '0'
           }
         },
-        'shiny-text': {
-          '0%, 90%, 100%': {
-            'background-position': 'calc(-100% - var(--shimmer-width)) 0'
+       "shiny-text": {
+          "0%, 90%, 100%": {
+            "background-position": "calc(-100% - var(--shimmer-width)) 0",
           },
-          '30%, 60%': {
-            'background-position': 'calc(100% + var(--shimmer-width)) 0'
-          }
-        }
+          "30%, 60%": {
+            "background-position": "calc(100% + var(--shimmer-width)) 0",
+          },
+        },
       },
       fontFamily: {
         sans: ["var(--font-sans)"],

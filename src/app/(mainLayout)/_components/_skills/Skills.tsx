@@ -52,9 +52,9 @@ const Skills = () => {
 
   return (
     <Container>
-      <div className="flex items-center gap-5 justify-center mt-10 ">
-        <div className="w-[50%] ">
-          <h2 className="text-4xl md:text-7xl font-bold text-left bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+      <div className="flex items-center flex-col-reverse lg:flex-row gap-5 justify-center mt-10 lg:px-0 px-5">
+        <div className="lg:w-[50%] ">
+          <h2 className="text-4xl md:text-7xl font-bold text-left bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 mb-5">
             Technical Proficiencies
           </h2>
           <TextGenerateEffect words={expertise} />
@@ -63,7 +63,7 @@ const Skills = () => {
           <TextGenerateEffect words={tools} />
           <TextGenerateEffect words={interpersonalSkills} />
         </div>
-        <div className="w-[50%] relative flex size-full items-center justify-center overflow-hidden   bg-background px-20 pb-20  border-r-4 border-sky-600">
+        <div className="lg:w-[50%] w-full relative flex size-full items-center justify-center overflow-hidden   bg-background lg:px-20 pb-20  lg:border-r-4 lg:border-sky-600">
           <IconCloud iconSlugs={slugs} />
         </div>
       </div>

@@ -13,44 +13,37 @@ import { LinkPreview } from "../_Animations_Genaretor/LinkGenerator";
 import { cn } from "@/src/lib/utils";
 const projects = [
   {
-    title: "Matthias Leidinger",
+    title: "SUMMER SPORTS EXCELLENCE",
     description:
-      "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.",
+      "Implement three dashboard for admin, instructor, and student. An admin can Approve, remove, give feedback, assign rules. Instructor: Add classes. User: Select, purchase courses. Course select button disabled when seat is below 1. And scroll animation, cartoon animation, dark-light mood",
     src: "rock.jpg",
-    link: "https://images.unsplash.com/photo-1605106702842-01a887a31122?q=80&w=500&auto=format&fit=crop",
+    link: "https://res.cloudinary.com/da5dhxzen/image/upload/v1729106795/Summer_Sports_Excellence1-d8d19bda_hdjr97.png",
+    frontendCode: "https://github.com/webashraf/summer-sports-excellence-",
+    backendCode: "https://github.com/webashraf/summer-sports-excellence-server",
+    liveLink: "https://a12-summer-camp.web.app/",
     color: "#5196fd",
   },
   {
-    title: "Clément Chapillon",
+    title: "SUMMER SPORTS EXCELLENCE",
     description:
-      "This is a story on the border between reality and imaginary, about the contradictory feelings that the insularity of a rocky, arid, and wild territory provokes”—so French photographer Clément.",
-    src: "tree.jpg",
-    link: "https://images.unsplash.com/photo-1605106250963-ffda6d2a4b32?w=500&auto=format&fit=crop&q=60",
-    color: "#8f89ff",
+      "Implement three dashboard for admin, instructor, and student. An admin can Approve, remove, give feedback, assign rules. Instructor: Add classes. User: Select, purchase courses. Course select button disabled when seat is below 1. And scroll animation, cartoon animation, dark-light mood",
+    src: "rock.jpg",
+    link: "https://res.cloudinary.com/da5dhxzen/image/upload/v1729106795/Summer_Sports_Excellence1-d8d19bda_hdjr97.png",
+    frontendCode: "https://github.com/webashraf/summer-sports-excellence-",
+    backendCode: "https://github.com/webashraf/summer-sports-excellence-server",
+    liveLink: "https://a12-summer-camp.web.app/",
+    color: "#5196fd",
   },
   {
-    title: "Zissou",
+    title: "SUMMER SPORTS EXCELLENCE",
     description:
-      "Though he views photography as a medium for storytelling, Zissou’s images don’t insist on a narrative. Both crisp and ethereal.",
-    src: "water.jpg",
-    link: "https://images.unsplash.com/photo-1605106901227-991bd663255c?w=500&auto=format&fit=crop",
-    color: "#13006c",
-  },
-  {
-    title: "Mathias Svold and Ulrik Hasemann",
-    description:
-      "The coastlines of Denmark are documented in tonal colors in a pensive new series by Danish photographers Ulrik Hasemann and Mathias Svold; an ongoing project investigating how humans interact with and disrupt the Danish coast.",
-    src: "house.jpg",
-    link: "https://images.unsplash.com/photo-1605106715994-18d3fecffb98?w=500&auto=format&fit=crop&q=60",
-    color: "#ed649e",
-  },
-  {
-    title: "Mark Rammers",
-    description:
-      "Dutch photographer Mark Rammers has shared with IGNANT the first chapter of his latest photographic project, ‘all over again’—captured while in residency at Hektor, an old farm in Los Valles, Lanzarote.",
-    src: "cactus.jpg",
-    link: "https://images.unsplash.com/photo-1506792006437-256b665541e2?w=500&auto=format&fit=crop",
-    color: "#fd521a",
+      "Implement three dashboard for admin, instructor, and student. An admin can Approve, remove, give feedback, assign rules. Instructor: Add classes. User: Select, purchase courses. Course select button disabled when seat is below 1. And scroll animation, cartoon animation, dark-light mood",
+    src: "rock.jpg",
+    link: "https://res.cloudinary.com/da5dhxzen/image/upload/v1729106795/Summer_Sports_Excellence1-d8d19bda_hdjr97.png",
+    frontendCode: "https://github.com/webashraf/summer-sports-excellence-",
+    backendCode: "https://github.com/webashraf/summer-sports-excellence-server",
+    liveLink: "https://a12-summer-camp.web.app/",
+    color: "#5196fd",
   },
 ];
 
@@ -68,13 +61,13 @@ export default function Projects(): JSX.Element {
           <div className="text-white  h-[70vh]  w-full bg-slate-950  grid place-content-center ">
             <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
 
-            <h1 className="2xl:text-7xl text-5xl px-8 font-semibold text-center tracking-tight leading-[120%]">
+            <h1 className="2xl:text-7xl text-4xl px-8 font-semibold text-center tracking-tight leading-[120%]">
               Transforming Ideas into <br /> Interactive Realities 👇
             </h1>
           </div>
         </div>
 
-        <div className="text-white   w-full bg-slate-950  mx-auto">
+        <div className="text-white w-full bg-slate-950  mx-auto">
           {projects.map((project, i) => {
             const targetScale = 1 - (projects.length - i) * 0.05;
 
@@ -82,7 +75,7 @@ export default function Projects(): JSX.Element {
               <Card
                 key={`p_${i}`}
                 color={project?.color}
-                description={project?.description}
+                description={project?.description.slice(0, 150)}
                 i={i}
                 progress={scrollYProgress}
                 range={[i * 0.25, 1]}
@@ -100,10 +93,10 @@ export default function Projects(): JSX.Element {
             <div className="z-10 flex min-h-64d items-center justify-center">
               <div
                 className={cn(
-                  "group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800"
+                  "group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200/50 dark:border-white/5 dark:bg-neutral-900/50 dark:hover:bg-neutral-800/50 backdrop-blur-sm"
                 )}
               >
-                <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
+                <AnimatedShinyText className="inline-flex items-center justify-center px-8 py-2 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
                   <span>✨ More Transforms</span>
                 </AnimatedShinyText>
               </div>
@@ -152,21 +145,21 @@ export const Card: React.FC<CardProps> = ({
   return (
     <div
       ref={container}
-      className="h-screen flex items-center justify-center sticky top-0"
+      className="h-screen flex items-center justify-center sticky top-0 p-5"
     >
       <motion.div
-        className={`flex flex-col relative -top-[25%] h-[600px] w-[70%] rounded-md p-10 origin-top`}
+        className={`flex flex-col relative -top-[25%] h-[600px] lg:w-[70%] w-[100%] rounded-md lg:p-10 p-5 origin-top bg-black/50 backdrop-blur-lg`}
         style={{
-          backgroundColor: color,
+          // backgroundColor: color,
           scale,
           top: `calc(-5vh + ${i * 25}px)`,
         }}
       >
-        <h2 className="text-2xl text-center font-semibold">{title}</h2>
-        <div className={`flex h-full mt- gap-10`}>
+        <h2 className="text-2xl text-center font-semibold mb-5">{title}</h2>
+        <div className={`flex flex-col lg:flex-row h-full mt- gap-10`}>
           <ScrollShadow
             hideScrollBar
-            className="w-[40%] h-[90%]"
+            className="lg:w-[40%] w-full h-[90%] lg:block hidden"
             offset={100}
             orientation="horizontal"
           >
@@ -178,7 +171,7 @@ export const Card: React.FC<CardProps> = ({
           </ScrollShadow>
 
           <div
-            className={`relative w-[60%] h-full rounded-lg overflow-hidden `}
+            className={`relative lg:w-[60%] w-full h-full rounded-lg overflow-hidden `}
           >
             <motion.div
               className={`w-full h-full`}
