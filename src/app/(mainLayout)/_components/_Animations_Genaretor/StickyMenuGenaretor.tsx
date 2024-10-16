@@ -9,6 +9,8 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 
+import MenuItems from "../_MenuItems/MenuItem";
+
 import Meteors from "./Metors";
 
 import { cn } from "@/src/lib/utils";
@@ -54,7 +56,7 @@ export const FloatingNav = ({
           opacity: visible ? 1 : 0,
         }}
         className={cn(
-          "flex max-w-fits w-[1400px] fixed top-5 inset-x-0 mx-auto  z-[5000]   items-center justify-center",
+          "flex max-w-fits lg:w-[1400px] fixed top-5 inset-x-0 mx-auto  z-[5000]   items-center justify-center",
           className
         )}
         initial={{
@@ -65,20 +67,20 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
       >
-        <div className="lg:w-full w-[100%] flex justify-between items-center ">
+        <div className="lg:w-full w-[100%] flex justify-between items-center flex-co gap-5 lg:px-0 px-5">
           <div className="relative flex  flex-col items-center justify-center overflow-hidden rounded-lg borde bg-backgroun md:shadow-x">
             <Meteors number={60} />
-            <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-6xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+            <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center lg:text-6xl text-5xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
               Ali Ashraf
             </span>
           </div>
 
-          <div className=" max:w-[20%] flex gap-3 dark:bg-black bg-white  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] p-3 border border-transparent dark:border-white/[0.2] rounded-md">
+          <div className=" items-center justify-center flex gap-3 dark:bg-black bg-white  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] p-3 border border-transparent dark:border-white/[0.2] rounded-md">
             {navItems.map((navItem: any, idx: number) => (
               <Link
                 key={`link=${idx}`}
                 className={cn(
-                  "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+                  " relative dark:text-neutral-50 items-center lg:flex hidden space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
                 )}
                 href={navItem.link}
               >
@@ -86,10 +88,14 @@ export const FloatingNav = ({
                 <span className="hidden sm:block text-sm">{navItem.name}</span>
               </Link>
             ))}
-            <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-md">
+            <button className=" lg:block hidden border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-md">
               <span>Menu</span>
               <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
             </button>
+            <div className="lg:hidden block">
+              {" "}
+              <MenuItems />
+            </div>
           </div>
         </div>
       </motion.div>
