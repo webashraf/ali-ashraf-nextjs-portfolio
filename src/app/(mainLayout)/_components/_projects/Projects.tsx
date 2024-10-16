@@ -3,12 +3,14 @@
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 // import { ReactLenis } from "lenis/react";
 import { ScrollShadow } from "@nextui-org/scroll-shadow";
-import { ReactLenis } from "lenis/react";
+// import { ReactLenis } from "lenis/react";
 import Image from "next/image";
 import { useRef } from "react";
 
-import ShinyButton from "../_Animations_Genaretor/ButtonGenarator";
+import AnimatedShinyText from "../_Animations_Genaretor/ButtonGenarator";
 import { LinkPreview } from "../_Animations_Genaretor/LinkGenerator";
+
+import { cn } from "@/src/lib/utils";
 const projects = [
   {
     title: "Matthias Leidinger",
@@ -60,7 +62,7 @@ export default function Projects(): JSX.Element {
   });
 
   return (
-    <ReactLenis root>
+    <div>
       <div ref={container} className="bg-black">
         <div>
           <div className="text-white  h-[70vh]  w-full bg-slate-950  grid place-content-center ">
@@ -94,14 +96,18 @@ export default function Projects(): JSX.Element {
         </div>
 
         <footer className="group bg-slate-950  ">
-          <div className="flex flex-col justify-center items-center bg-whit">
-            <ShinyButton>See more</ShinyButton>
-            <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50">
-              <span className="absolute  inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#a2aeff_0%,#3749be_50%,#a2aeff_100%)] dark:bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-              <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full dark:bg-[#070e41] bg-[#ffffff] px-8 py-1 text-sm font-medium dark:text-gray-50 text-black backdrop-blur-3xl">
-                Click Me
-              </span>
-            </button>
+          <div className="flex flex-col justify-center items-center bg-whit mb-10">
+            <div className="z-10 flex min-h-64d items-center justify-center">
+              <div
+                className={cn(
+                  "group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800"
+                )}
+              >
+                <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
+                  <span>✨ More Transforms</span>
+                </AnimatedShinyText>
+              </div>
+            </div>
           </div>
           <h1 className="text-[16vw]  translate-y-20 leading-[100%] uppercase font-semibold text-center bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-transparent transition-all ease-linear">
             Ashraf
@@ -109,7 +115,7 @@ export default function Projects(): JSX.Element {
           <div className="bg-black h-40 relative z-10 grid place-content-center text-2xl rounded-tr-full rounded-tl-full" />
         </footer>
       </div>
-    </ReactLenis>
+    </div>
   );
 }
 interface CardProps {
