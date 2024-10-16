@@ -7,6 +7,7 @@ import { ReactLenis } from "lenis/react";
 import Image from "next/image";
 import { useRef } from "react";
 
+import ShinyButton from "../_Animations_Genaretor/ButtonGenarator";
 import { LinkPreview } from "../_Animations_Genaretor/LinkGenerator";
 const projects = [
   {
@@ -66,7 +67,7 @@ export default function Projects(): JSX.Element {
             <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
 
             <h1 className="2xl:text-7xl text-5xl px-8 font-semibold text-center tracking-tight leading-[120%]">
-              Stacking Cards Using <br /> Framer-Motion. Scroll down! 👇
+              Transforming Ideas into <br /> Interactive Realities 👇
             </h1>
           </div>
         </div>
@@ -92,7 +93,16 @@ export default function Projects(): JSX.Element {
           })}
         </div>
 
-        <footer className="group bg-slate-950 ">
+        <footer className="group bg-slate-950  ">
+          <div className="flex flex-col justify-center items-center bg-whit">
+            <ShinyButton>See more</ShinyButton>
+            <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50">
+              <span className="absolute  inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#a2aeff_0%,#3749be_50%,#a2aeff_100%)] dark:bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+              <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full dark:bg-[#070e41] bg-[#ffffff] px-8 py-1 text-sm font-medium dark:text-gray-50 text-black backdrop-blur-3xl">
+                Click Me
+              </span>
+            </button>
+          </div>
           <h1 className="text-[16vw]  translate-y-20 leading-[100%] uppercase font-semibold text-center bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-transparent transition-all ease-linear">
             Ashraf
           </h1>

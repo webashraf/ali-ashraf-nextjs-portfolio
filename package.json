@@ -29,10 +29,12 @@
 		"@tsparticles/engine": "^3.5.0",
 		"@tsparticles/react": "^3.0.0",
 		"@tsparticles/slim": "^3.5.0",
+		"class-variance-authority": "^0.7.0",
 		"clsx": "^2.1.1",
-		"framer-motion": "^11.11.8",
+		"framer-motion": "^11.11.9",
 		"intl-messageformat": "^10.5.0",
 		"lenis": "^1.1.14",
+		"lucide-react": "^0.453.0",
 		"mini-svg-data-uri": "^1.4.4",
 		"next": "14.2.4",
 		"next-themes": "^0.2.1",
@@ -40,7 +42,8 @@
 		"react": "18.3.1",
 		"react-dom": "18.3.1",
 		"react-icon-cloud": "^4.1.4",
-		"tailwind-merge": "^2.5.4"
+		"tailwind-merge": "^2.5.4",
+		"tailwindcss-animate": "^1.0.7"
 	},
 	"devDependencies": {
 		"@types/node": "20.5.7",
