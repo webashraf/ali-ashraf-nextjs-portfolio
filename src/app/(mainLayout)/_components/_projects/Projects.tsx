@@ -15,7 +15,7 @@ const projects = [
   {
     title: "SUMMER SPORTS EXCELLENCE",
     description:
-      "Implement three dashboard for admin, instructor, and student. An admin can Approve, remove, give feedback, assign rules. Instructor: Add classes. User: Select, purchase courses. Course select button disabled when seat is below 1. And scroll animation, cartoon animation, dark-light mood",
+      "mplement firebase authentication like google, github, and email/password authentication. And use private route. You can add, update, delete and search for a toy. And awesome slider, animation and responsive home page. A beautiful car gallery has been added to the home page. Which becomes a slider when you click on the image.",
     src: "rock.jpg",
     link: "https://res.cloudinary.com/da5dhxzen/image/upload/v1729106795/Summer_Sports_Excellence1-d8d19bda_hdjr97.png",
     frontendCode: "https://github.com/webashraf/summer-sports-excellence-",
@@ -24,14 +24,14 @@ const projects = [
     color: "#5196fd",
   },
   {
-    title: "SUMMER SPORTS EXCELLENCE",
+    title: "VroomVroomPlay",
     description:
       "Implement three dashboard for admin, instructor, and student. An admin can Approve, remove, give feedback, assign rules. Instructor: Add classes. User: Select, purchase courses. Course select button disabled when seat is below 1. And scroll animation, cartoon animation, dark-light mood",
     src: "rock.jpg",
-    link: "https://res.cloudinary.com/da5dhxzen/image/upload/v1729106795/Summer_Sports_Excellence1-d8d19bda_hdjr97.png",
-    frontendCode: "https://github.com/webashraf/summer-sports-excellence-",
-    backendCode: "https://github.com/webashraf/summer-sports-excellence-server",
-    liveLink: "https://a12-summer-camp.web.app/",
+    link: "https://res.cloudinary.com/da5dhxzen/image/upload/v1729152929/screencapture-vroomvroomplay-web-app-2024-10-17-01_38_40_zv5ufm.png",
+    frontendCode: "https://github.com/webashraf/vroomVroomPlay",
+    backendCode: "https://github.com/webashraf/vroomVroomPlay_server",
+    liveLink: "https://vroomvroomplay.web.app/",
     color: "#5196fd",
   },
   {

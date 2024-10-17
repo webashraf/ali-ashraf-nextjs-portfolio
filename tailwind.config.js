@@ -3,6 +3,9 @@ const colors = require("tailwindcss/colors");
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
+// const {
+//   default: flattenColorPalette,
+// } = require("tailwindcss/lib/util/flattenColorPalette");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -15,9 +18,17 @@ module.exports = {
       animation: {
         spotlight: 'spotlight 2s ease .75s 1 forwards',
         meteor: 'meteor 5s linear infinite',
-        "shiny-text": "shiny-text 8s infinite",
+        aurora: "aurora 60s linear infinite",
       },
       keyframes: {
+        aurora: {
+          from: {
+            backgroundPosition: "50% 50%, 50% 50%",
+          },
+          to: {
+            backgroundPosition: "350% 50%, 350% 50%",
+          },
+        },
         spotlight: {
           '0%': {
             opacity: '0',
@@ -41,14 +52,6 @@ module.exports = {
             opacity: '0'
           }
         },
-       "shiny-text": {
-          "0%, 90%, 100%": {
-            "background-position": "calc(-100% - var(--shimmer-width)) 0",
-          },
-          "30%, 60%": {
-            "background-position": "calc(100% + var(--shimmer-width)) 0",
-          },
-        },
       },
       fontFamily: {
         sans: ["var(--font-sans)"],
@@ -58,6 +61,7 @@ module.exports = {
   },
   darkMode: ["class"],
   plugins: [
+    addVariablesForColors,
     function ({ matchUtilities, theme }) {
       matchUtilities(
         {
@@ -82,4 +86,15 @@ module.exports = {
     },
     require("tailwindcss-animate"),
   ],
+}
+// This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
+function addVariablesForColors({ addBase, theme }) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+ 
+  addBase({
+    ":root": newVars,
+  });
 }
