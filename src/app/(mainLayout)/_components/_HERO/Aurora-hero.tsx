@@ -19,7 +19,7 @@ export function AuroraBackgroundHero() {
         }}
         whileInView={{ opacity: 1, y: 0 }}
       >
-        <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full lg:pt- pt-48 md:pt-0">
+        <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full lg:pt- lg:pt-48 md:pt-0">
           <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 py-5">
             Crafting Dynamic Web Solutions
           </h1>

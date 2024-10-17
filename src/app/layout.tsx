@@ -42,10 +42,10 @@ export default function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="relative flex flex-col h-screen container lg:max-w-[1920px] mx-auto">
+          <div className="relative flex flex-col h-screen container max-w-[1920px] mx-auto">
             {/* <Navbar /> */}
             <FloatingNavDemo />
-            <main className=" mx-auto px-0 flex-grow container lg:max-w-[1920px]">
+            <main className=" mx-auto px-0 flex-grow container max-w-[1920px] ">
               {children}
             </main>
           </div>
