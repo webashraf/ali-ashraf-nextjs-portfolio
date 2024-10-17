@@ -17,7 +17,7 @@ export function MyAnimatedPhoto() {
             alt="thumbnail"
             className="h- w-full object-cover rounded-xl group-hover/card:shadow-xl"
             height="1000"
-            src="https://res.cloudinary.com/da5dhxzen/image/upload/v1728929736/FaceApp_1687186694780_gsva7h.jpg"
+            src="https://res.cloudinary.com/dyalzfwd4/image/upload/v1729179383/Ali_Ashraf_Photo_ab35ru.jpg"
             width="1000"
           />
         </CardItem>
